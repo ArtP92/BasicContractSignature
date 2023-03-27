@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+      type="application/javascript"
+    ></script>
+    <script src="script7.js"></script>
+  </head>
+
+
+  <body>
+    <div class="container">
+    <h1 class="section-title">Административный кабинет</h1>
+    <h2>Управение адресами для подписи</h2>
+    <label for="address">Следует указать адрес участника для подписи документа:</label>
+    <input 
+      type="text" 
+      id="address" 
+      name="address" 
+      placeholder="0xA05Ae3d8707C44D724B764a3BeA756b373C46078" />
+
+    <button id="addAddressButton">Добавить участника для подписи</button>
+    <button id="removeAddressButton">Удалить участника для подписи</button>
+    <button id="showWhitelistButton">Показать адреса участников</button>
+
+    <h2>Документ для подписи</h2>
+    <label for="newDocumentHash">Следует указать Hash Документа</label>
+    <input
+      type="text"
+      id="newDocumentHash"
+      name="newDocumentHash"
+      placeholder="0x0000000000000000000000000000000000000000000000000000000000000001"
+    />
+    <button id="addDocumentHashButton">Добавить Hash документа</button>
+
+    <hr />
+
+    <h1 class="section-title">Кабинет участника подписи документа</h1>
+    <h2>Подписание документа</h2>
+    <label for="documentHash">Следует указать Hash Документа</label>
+    <input
+      type="text"
+      id="documentHash"
+      name="documentHash"
+      placeholder="0x0000000000000000000000000000000000000000000000000000000000000001"
+    />
+    <button id="signButton">Подписать документ</button>
+    <button id="checkButton">Документ согласован?</button>
+    <button id="voteCountButton">Количество подписанных участников</button>
+
+    <p id="status"></p>
+    </div>
+  </body>
+</html>
